@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>算法介绍 [ 小小的教程网 ]</title>
+
+  <link rel="icon" href="/img/favicon.ico">
+
+
+    <meta name="author" content="小小的教程网">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml " title="小小的教程网" type="application/atom+xml">
+
+
+  
+    <link rel="stylesheet" href="/css/main.css">
+  
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+  <body data-theme="light" class="notransition">
+    <script>
+      const body = document.body;
+      const data = body.getAttribute("data-theme");
+      const initTheme = (state) => {
+        if (state === "dark") {
+          body.setAttribute("data-theme", "dark");
+        } else if (state === "light") {
+          body.removeAttribute("data-theme");
+        } else {
+          localStorage.setItem("theme", data);
+        }
+      };
+   
+      initTheme(localStorage.getItem("theme"));
+      
+      setTimeout(() => body.classList.remove("notransition"), 75);
+    </script>
+  <div class="navbar" role="navigation">
+    <nav class="menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <span class="menu-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            />
+          </svg>
+        </span>
+      </label>
+      <a id="mode">
+        <svg
+          class="mode-sunny"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 512 512"
+        >
+          <title>LIGHT</title>
+          <line
+            x1="256"
+            y1="48"
+            x2="256"
+            y2="96"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="256"
+            y1="416"
+            x2="256"
+            y2="464"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="108.92"
+            x2="369.14"
+            y2="142.86"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="369.14"
+            x2="108.92"
+            y2="403.08"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="464"
+            y1="256"
+            x2="416"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="96"
+            y1="256"
+            x2="48"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="403.08"
+            x2="369.14"
+            y2="369.14"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="142.86"
+            x2="108.92"
+            y2="108.92"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <circle
+            cx="256"
+            cy="256"
+            r="80"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+        </svg>
+        <svg
+          class="mode-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 512 512"
+        >
+          <title>DARK</title>
+          <line
+            x1="256"
+            y1="48"
+            x2="256"
+            y2="96"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="256"
+            y1="416"
+            x2="256"
+            y2="464"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="108.92"
+            x2="369.14"
+            y2="142.86"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="369.14"
+            x2="108.92"
+            y2="403.08"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="464"
+            y1="256"
+            x2="416"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="96"
+            y1="256"
+            x2="48"
+            y2="256"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="403.08"
+            y1="403.08"
+            x2="369.14"
+            y2="369.14"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <line
+            x1="142.86"
+            y1="142.86"
+            x2="108.92"
+            y2="108.92"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+          <circle
+            cx="256"
+            cy="256"
+            r="80"
+            style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
+          />
+        </svg>
+      </a>
+      <div class="trigger">
+        <div class="trigger-container">
+          
+            
+            
+            
+            
+            
+            
+            <a class="menu-link " href="/"> Home</a>
+          
+            
+            
+            
+            
+            
+            
+            <a class="menu-link " href="/about/"> About</a>
+          
+            
+            
+            
+            
+            
+            
+            <a class="menu-link " href="/archives/"> Archives</a>
+          
+            
+            
+            
+            
+            
+            
+            <a class="menu-link " href="/keceng/"> 课程</a>
+          
+            
+            
+            
+            
+            
+            
+            <a class="menu-link " href="/book/"> 技术书籍</a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+<div class="wrapper post">
+  <main class="page-content" aria-label="Content">
+      <header class="header">
+        
+        <h1 class="header-title" itemprop="headline">算法介绍</h1>
+          <div class="post-meta">
+            <time>Apr 05, 2025</time>
+            <span itemprop="author">
+              <span itemprop="name">小小的教程网</span>
+            </span>
+          </div>
+        </header>
+
+          <div class="page-content"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>算法是一个逐步的过程，它定义了一组指令，这些指令按特定顺序执行以获得所需的输出。算法通常独立于底层语言创建，即算法可以用多种编程语言实现。</p>
+<p>从数据结构的角度来看，以下是一些重要的算法类别 -</p>
+<p>搜索 - 搜索数据结构中的项目的算法。</p>
+<p>排序 - 按特定顺序对项目进行排序的算法。</p>
+<p>插入 - 在数据结构中插入项的算法。</p>
+<p>更新 - 更新数据结构中现有项的算法。</p>
+<p>删除 - 从数据结构中删除现有项目的算法。</p>
+<h1 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h1><p>并非所有程序都可以称为算法。算法应具有以下特征 -</p>
+<p>明确 - 算法应清晰明确。它的每个步骤（或阶段）及其输入&#x2F;输出应该是清楚的，并且必须只有一个含义。</p>
+<p>输入 - 算法应具有0个或更多明确定义的输入。</p>
+<p>输出 - 算法应具有1个或多个明确定义的输出，并且应与所需的输出匹配。</p>
+<p>有限性 - 算法必须在有限数量的步骤之后终止。</p>
+<p>可行性 - 利用现有资源应该可行。</p>
+<p>独立 - 算法应该具有逐步指导，这应该独立于任何编程代码。</p>
+<h1 id="如何写算法"><a href="#如何写算法" class="headerlink" title="如何写算法"></a>如何写算法</h1><p>编写算法没有明确的标准。相反，它取决于问题和资源。永远不会编写算法来支持特定的编程代码。</p>
+<p>我们知道所有编程语言都共享基本代码结构，如循环（do，for，while），流控制（if-else）等。这些常用结构可用于编写算法。</p>
+<p>我们一步一步地编写算法，但情况并非总是如此。算法编写是一个过程，在问题域定义明确后执行。也就是说，我们应该知道我们正在设计解决方案的问题域。</p>
+<h2 id="例"><a href="#例" class="headerlink" title="例"></a>例</h2><p>让我们尝试通过一个例子学习算法编写。<br><strong>设计一个算法来添加两个数字并显示结果。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Step 1 − START</span><br><span class="line">Step 2 − declare three integers a, b &amp; c</span><br><span class="line">Step 3 − define values of a &amp; b</span><br><span class="line">Step 4 − add values of a &amp; b</span><br><span class="line">Step 5 − store output of step 4 to c</span><br><span class="line">Step 6 − print c</span><br><span class="line">Step 7 − STOP</span><br></pre></td></tr></table></figure>
+<p>算法告诉程序员如何编写程序代码。或者，算法可以写成 -</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Step 1 − START ADD</span><br><span class="line">Step 2 − get values of a &amp; b</span><br><span class="line">Step 3 − c ← a + b</span><br><span class="line">Step 4 − display c</span><br><span class="line">Step 5 − STOP</span><br></pre></td></tr></table></figure>
+<p>在算法的设计和分析中，通常使用第二种方法来描述算法。它使分析人员可以轻松分析算法，忽略所有不需要的定义。他可以观察正在使用的操作以及流程如何流动。</p>
+<p>编写步骤编号是可选的。</p>
+<p>我们设计了一种算法来获得给定问题的解决方案。问题可以通过多种方式解决。<br><img src="/./image/problem_solutions.jpg"><br>因此，可以针对给定问题导出许多解算法。下一步是分析那些提出的解决方案算法并实施最合适的解决方案。</p>
+<h1 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h1><p>算法的效率可以在实现之前和实现之后的两个不同阶段进行分析。他们是以下 -</p>
+<p>先验分析 - 这是对算法的理论分析。通过假设所有其他因素（例如，处理器速度）是恒定的并且对实现没有影响来测量算法的效率。</p>
+<p>后验分析 - 这是对算法的实证分析。所选算法使用编程语言实现。然后在目标计算机上执行此操作。在此分析中，收集了所需的运行时间和空间等实际统计数据。</p>
+<p>我们将学习先验算法分析。算法分析处理所涉及的各种操作的执行或运行时间。操作的运行时间可以定义为每个操作执行的计算机指令的数量。</p>
+<h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><p>假设X是算法，n是输入数据的大小，算法X使用的时间和空间是决定X效率的两个主要因素。</p>
+<p>时间因素 - 时间是通过计算关键操作的数量来测量的，例如排序算法中的比较。</p>
+<p>空间因子 - 通过计算算法所需的最大内存空间来测量空间。</p>
+<p>算法f（n）的复杂性给出算法所需的运行时间和&#x2F;或存储空间，以n为输入数据的大小。</p>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p>算法的空间复杂度表示算法在其生命周期中所需的存储空间量。算法所需的空间等于以下两个组件的总和 -</p>
+<p>固定部分，是存储某些数据和变量所需的空间，与问题的大小无关。例如，使用的简单变量和常量，程序大小等。</p>
+<p>变量部分是变量所需的空间，其大小取决于问题的大小。例如，动态内存分配，递归堆栈空间等。</p>
+<p>任何算法P的空间复杂度S（P）是S（P）&#x3D; C + SP（I），其中C是固定部分，S（I）是算法的可变部分，它取决于实例特征I.是一个试图解释这个概念的简单例子 -</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Algorithm: SUM(A, B)</span><br><span class="line">Step 1 -  START</span><br><span class="line">Step 2 -  C ← A + B + 10</span><br><span class="line">Step 3 -  Stop</span><br></pre></td></tr></table></figure>
+<p>这里我们有三个变量A，B和C以及一个常数。因此，S（P）&#x3D; 1 + 3.现在，空间取决于给定变量和常量类型的数据类型，并且它将相应地相乘。</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>算法的时间复杂度表示算法运行完成所需的时间量。时间要求可以定义为数值函数T（n），其中T（n）可以作为步数来测量，条件是每个步骤消耗恒定的时间。</p>
+<p>例如，添加两个n位整数需要n步。因此，总计算时间是T（n）&#x3D; c * n，其中c是添加两个比特所花费的时间。在这里，我们观察到T（n）随着输入大小的增加而线性增长。</p>
+</div>
+          <nav class="post-nav">
+    
+    
+    <a class="post-nav-item post-nav-next" href="/2025/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%8B%E7%BB%8D/">
+      <div class="nav-arrow">OLDER&nbsp;&gt;</div>
+      <span class="post-title">数据结构介绍</span>
+    </a>
+    
+  </nav>
+
+   </main>
+</div>
+
+  <footer class="footer">
+    <small class="footer_copyright">
+      <div id="bottom-inner">
+        © 2021 Site by 小小的教程网 using
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo blog framework</a>.
+        <br>
+        <p> Theme is <a target="_blank" rel="noopener" href="https://github.com/dewjohn/hexo-theme-klise">Klise</a></p>
+      </div>
+    </small>
+  </footer>
+  
+  
+
+    
+      <script src="/js/main.js"></script>
+    
+  
+  <script>
+    window.FPConfig = {
+      delay: 0,
+      ignoreKeywords: [],
+      maxRPS: 3,
+      hoverDelay: 50,
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+</body>
+</html>
